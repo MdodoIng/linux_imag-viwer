@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: rgb(171, 212, 219);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 2px;
+  background-color: #2f2f2f;
+  border: 2px solid #3b3b3b;
+  box-shadow: 0px 0px 22px 0px #161616e8;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 5px;
+}
+
+.title p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #d7cfcf;
+
+}
+
+.allCTRL {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 70px;
+  height: 14px;
+
+}
+
+.allCTRL span {
+  border-radius: 50px;
+  background-color: #2f2f2f;
+  color: #909090;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: alias;
+  filter: brightness(1);
+}
+
+.allCTRL span:hover {
+  filter: brightness(1.5);
+}
+
+.allCTRL .minus {
+  font-size: 25px;
+  padding: 0px 0 3px 0;
+  font-weight: 500;
+
+}
+
+.allCTRL .pulse {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.allCTRL .close {
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  padding: 1px 0 0 1px;
+  background-color: #9ab87c;
+  filter: none;
+  color: #2f2f2f;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+}
+
+.menu abbr {
+  font-size: 12px;
+  font-weight: 400;
+  color: #d7cfcf;
+  cursor: alias;
+  padding: 7px;
+}
+.menu abbr:hover {
+  background-color: #8fa876;
+}
+
+.tools {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  margin-top: 5px;
+  gap: 2px;
+}
+
+.tools span {
+  width: 32px;
+  height: 32px;
+  background-color: #2f2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: alias;
+  filter: none;
+  color: #ded6d6;
+  padding: 9px;
+  border: 0.5px solid transparent;
+  position: relative;
+}
+
+.tools small {
+  margin: 0 2px;
+  background-color: #454545;
+  width: 1.2px;
+  height: 18px;
+
+}
+
+.tools span:hover {
+  background-color: #666666;
+  border: 0.5px solid #242424;
+
+}
+
+.picsG {
+  width: 100%;
+  max-height: 100vh;
+  height: 500px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.biy {
+  transform: rotate3d(1, 0, 10, 90deg);
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  color: #dadada;
+  font-size: 13px;
+  letter-spacing: .5px;
+  cursor: alias;
+}
+
+.fileDetails {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+span .tooltip {
+  position: absolute;
+  width: max-content;
+  background-color: #fbeaa0;
+  z-index: 1;
+  top: 35px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  border: 1px solid #585858;
+  box-shadow: 0 0 8px -1px #4e4e4e;
+  visibility: hidden;
+}
+
+span:hover .tooltip {
+  visibility: visible;
+}
+
+.tooltip p {
+  font-size: 12px;
+  color: #2c2b27;
+}
+
+.decibel i {
+  color: #8f8a8a;
+  background-color: transparent;
+}
+
+.tools .decibel:hover {
+  background-color: transparent;
+  border: 0.5px solid transparent;
+
+}
+
+.ItemContainer {
+  display: grid;
+  position: absolute;
+  background-color: #383838;
+  height: max-content;
+  grid-auto-columns: auto;
+  cursor: alias;
+  z-index: 1;
+  padding: 5px 0;
+  top: 22px;
+  box-shadow: 0 0 5px #00000029;
+}
+
+.item {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  padding: 5px;
+  color: #dadada;
+  border: 1px solid #00000000;
+}
+
+.item_first {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+}
+
+.item i {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  display: block;
+
+}
+
+.item p {
+  font-size: 12px;
+  margin-right: 200px;
+  font-weight: 400;
+  letter-spacing: .7px;
+}
+
+.item small {
+  font-size: 12px;
+  color: #8b8e8e;
+}
+
+.item:hover {
+  background-color: #444444;
+  border: 1px solid #585858;
+}
+
+.sprite {
+  display: flex;
+  width: 100%;
+  height: 5px;
+}
+.file .ItemContainer {
+  visibility: hidden;
+}
+.file:hover .ItemContainer {
+  visibility: visible;
+}
+.edit .ItemContainer {
+  visibility: hidden;
+}
+.edit:hover .ItemContainer{
+  visibility: visible;
+}
+.edit p {
+  margin-right: 15px;
+}
+.decibel {
+  background-color: transparent;
+  border: none;
+  color:#919191;
+}
+.decibel small {
+  color:#686867;
+}
+.decibel:hover {
+  border: none;
+  background-color: transparent;
+}
+.view p {
+  margin-right: 15px;
+}
+.view .ItemContainer {
+  visibility: hidden;
+}
+.view:hover .ItemContainer {
+  visibility: visible;
+}
+.go p {
+  margin-right: 25px;
+}
+.go .ItemContainer {
+  visibility: hidden;
+}
+.go:hover .ItemContainer {
+  visibility: visible;
+}
+.help p {
+  margin-right: 15px;
+}
+.help .ItemContainer{
+  visibility: hidden;
+}
+.help:hover .ItemContainer{
+  visibility: visible;
+}
